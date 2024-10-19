@@ -964,38 +964,6 @@ function projectMasonaryLayout() {
 
 
 
-function sendWhatsAppMessage(event) {
-  event.preventDefault(); 
-
-  const name = document.getElementById("name").value;
-  const whatsappNumber = document.getElementById("whatsappNumber").value;
-  const phone = document.getElementById("phone").value;
-  const course = document.getElementById("course").value;
-  const branch = document.getElementById("branch").value;
-
-  let whatsappURL;
-
-  // Assign WhatsApp number based on the selected branch
-  if (branch === "Baghbhanpura Road Campus") {
-      whatsappURL = `https://wa.me/+923087962332`; // Number for Baghbhanpura Road Campus
-  } else if (branch === "Walton Road Campus") {
-      whatsappURL = `https://wa.me/+923214510621`; // Number for Walton Road Campus
-  } else if (branch === "Queen’s Road Campus") {
-      whatsappURL = `https://wa.me/+923221008062`; // Number for Queen’s Road Campus
-  } else {
-      alert("Please select a branch.");
-      return;
-  }
-
-  const whatsappMessage = `Name: ${name}%0AWhatsApp Number: ${whatsappNumber}%0APhone: ${phone}%0ACourse: ${course}%0ABranch: ${branch}`;
-
-  // Add the message to the URL
-  whatsappURL += `?text=${whatsappMessage}`;
-
-  window.open(whatsappURL, "_blank");
-}
-
-
 
 
 
