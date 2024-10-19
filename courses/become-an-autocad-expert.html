@@ -495,31 +495,69 @@ Artists for creating sculptures and experimental art.<br>
                         <div class="course-details__new-courses wow fadeInUp animated" data-wow-delay="0.5s">
                             <h3 class="course-details__new-courses-title text-center">Join Now</h3>
                             <div class="">
-                                <form action="server.php" method="post">
-                                <div class="comment-form__input-box">
-                                    <input type="text" placeholder="Your name" name="name" required>
-                                </div>
-                                <div class="comment-form__input-box">
-                                    <input type="text" placeholder="WhatsApp Number" name="email" required>
-                                </div>
-                                <div class="comment-form__input-box">
-                                    <input type="text" placeholder="Phone number" name="phone" required>
-                                </div>
-                                <div class="comment-form__input-box">
-                                    <input type="text" placeholder="Course Name" name="subject" required>
-                                </div>
-                                <div class="comment-form__input-box">
-                                    <select class="form-select" required name="branch">
-                                        <option value="" selected>Select Branch</option>
-                                        <option name="branch">Baghbhanpura Road Campus</option>
-                                        <option name="branch">Walton Road Campus</option>
-                                        <option name="branch">Queen’s Road Campus</option>
-                                      </select>
-                                </div>
-                                <br>
-                                <button type="submit" class="thm-btn comment-form__btn">Submit</button>
-                            </form>
+                                <form id="whatsappForm" onsubmit="sendWhatsAppMessage(event)">
+                                    <div class="comment-form__input-box">
+                                        <input type="text" placeholder="Your name" name="name" id="name" required>
+                                    </div>
+                                    <div class="comment-form__input-box">
+                                        <input type="text" placeholder="WhatsApp Number" name="email"
+                                            id="whatsappNumber" required>
+                                    </div>
+                                    <div class="comment-form__input-box">
+                                        <input type="text" placeholder="Phone number" name="phone" id="phone"
+                                            required>
+                                    </div>
+                                    <div class="comment-form__input-box">
+                                        <input type="text" placeholder="Course Name" name="subject" id="course"
+                                            required>
+                                    </div>
+                                    <div class="comment-form__input-box">
+                                        <select class="form-select" name="branch" id="branch" required>
+                                            <option value="" selected>Select Branch</option>
+                                            <option value="Baghbhanpura Road Campus">Baghbhanpura Road Campus
+                                            </option>
+                                            <option value="Walton Road Campus">Walton Road Campus</option>
+                                            <option value="Queen’s Road Campus">Queen’s Road Campus</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <button class="registration-one__right-form-btn" type="submit">
+                                        <span class="thm-btn">Apply for it</span>
+                                    </button>
+                                </form>
                             </div>
+                            <script>
+                                function sendWhatsAppMessage(event) {
+                                    event.preventDefault();
+
+                                    const name = document.getElementById("name").value;
+                                    const whatsappNumber = document.getElementById("whatsappNumber").value;
+                                    const phone = document.getElementById("phone").value;
+                                    const course = document.getElementById("course").value;
+                                    const branch = document.getElementById("branch").value;
+
+                                    let whatsappURL;
+
+                                    // Assign WhatsApp number based on the selected branch
+                                    if (branch === "Baghbhanpura Road Campus") {
+                                        whatsappURL = `https://wa.me/+923045983939`;
+                                    } else if (branch === "Walton Road Campus") {
+                                        whatsappURL = `https://wa.me/+923218446124`;
+                                    } else if (branch === "Queen’s Road Campus") {
+                                        whatsappURL = `https://wa.me/+923095990236`;
+                                    } else {
+                                        alert("Please select a branch.");
+                                        return;
+                                    }
+
+                                    const whatsappMessage = `Name: ${name}%0AWhatsApp Number: ${whatsappNumber}%0APhone: ${phone}%0ACourse: ${course}%0ABranch: ${branch}`;
+
+                                    // Add the message to the URL
+                                    whatsappURL += `?text=${whatsappMessage}`;
+
+                                    window.open(whatsappURL, "_blank");
+                                }
+                            </script>
                         </div>
                     </div>
                 </div>
