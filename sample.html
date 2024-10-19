@@ -54,36 +54,66 @@
 </head>
 <body>
 
-    <div class="contact-form">
-        <h2>Contact Us</h2>
-        <form id="whatsappForm" onsubmit="sendWhatsAppMessage(event)">
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Your Name" required>
-
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" placeholder="Your Phone Number" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-
-            <button type="submit">Send via WhatsApp</button>
-        </form>
-    </div>
+    <form id="whatsappForm" onsubmit="sendWhatsAppMessage(event)">
+        <div class="comment-form__input-box">
+            <input type="text" placeholder="Your name" name="name" id="name" required>
+        </div>
+        <div class="comment-form__input-box">
+            <input type="text" placeholder="WhatsApp Number" name="email" id="whatsappNumber" required>
+        </div>
+        <div class="comment-form__input-box">
+            <input type="text" placeholder="Phone number" name="phone" id="phone" required>
+        </div>
+        <div class="comment-form__input-box">
+            <input type="text" placeholder="Course Name" name="subject" id="course" required>
+        </div>
+        <div class="comment-form__input-box">
+            <select class="form-select" name="branch" id="branch" required>
+                <option value="" selected>Select Branch</option>
+                <option value="Baghbhanpura Road Campus">Baghbhanpura Road Campus</option>
+                <option value="Walton Road Campus">Walton Road Campus</option>
+                <option value="Queen’s Road Campus">Queen’s Road Campus</option>
+            </select>
+        </div>
+        <br>
+        <button class="registration-one__right-form-btn" type="submit">
+            <span class="thm-btn">Apply for it</span>
+        </button>
+    </form>
+    
 
     <script>
-        function sendWhatsAppMessage(event) {
-            event.preventDefault(); 
+       function sendWhatsAppMessage(event) {
+    event.preventDefault(); 
 
-            const name = document.getElementById("name").value;
-            const phone = document.getElementById("phone").value;
-            const message = document.getElementById("message").value;
+    const name = document.getElementById("name").value;
+    const whatsappNumber = document.getElementById("whatsappNumber").value;
+    const phone = document.getElementById("phone").value;
+    const course = document.getElementById("course").value;
+    const branch = document.getElementById("branch").value;
 
-            const whatsappMessage = `Name: ${name}%0APhone: ${phone}%0AMessage: ${message}`;
+    let whatsappURL;
 
-            const whatsappURL = `https://wa.me/+923087962332?text=${whatsappMessage}`;
+    // Assign WhatsApp number based on the selected branch
+    if (branch === "Baghbhanpura Road Campus") {
+        whatsappURL = `https://wa.me/+923087962331`; // Number for Baghbhanpura Road Campus
+    } else if (branch === "Walton Road Campus") {
+        whatsappURL = `https://wa.me/+923087962332`; // Number for Walton Road Campus
+    } else if (branch === "Queen’s Road Campus") {
+        whatsappURL = `https://wa.me/+923087962333`; // Number for Queen’s Road Campus
+    } else {
+        alert("Please select a branch.");
+        return;
+    }
 
-            window.open(whatsappURL, "_blank");
-        }
+    const whatsappMessage = `Name: ${name}%0AWhatsApp Number: ${whatsappNumber}%0APhone: ${phone}%0ACourse: ${course}%0ABranch: ${branch}`;
+
+    // Add the message to the URL
+    whatsappURL += `?text=${whatsappMessage}`;
+
+    window.open(whatsappURL, "_blank");
+}
+
     </script>
 
 </body>
