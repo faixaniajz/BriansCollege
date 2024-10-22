@@ -19,10 +19,10 @@
   
   
 RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-f
+# Remove .php file extention
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ https://brainscollege.edu.pk/ [L]
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
 
 
 # Remove .php file extention
