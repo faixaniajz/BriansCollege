@@ -51,6 +51,68 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/zilom.css" />
     <link rel="stylesheet" href="assets/css/zilom-responsive.css" />
+    <!--schema markup-->
+    <script type="application/ld+json" data-purpose="safely-set-inner-html:course-landing-page/seo-info">
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "Course",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Brains College",
+        "sameAs": "https://brainscollege.edu.pk/"
+      },
+      "provider": {
+        "@type": "Person",
+        "name": "Junaid Subhani",
+        "sameAs": "https://brainscollege.edu.pk/contact"
+      },
+      "@id": "https://brainscollege.edu.pk/course",
+      "name": "Computer Courses at Brains College | IT Education in Punjab",
+      "description": "Explore a wide range of computer courses at Brains College in Punjab. Enhance your tech skills with our expert-led programs designed for your career success.",
+      "isAccessibleForFree": true,
+      "image": "https://brainscollege.edu.pk/assets/images/resources/main%20image.png",
+      "inLanguage": "hi",
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "PT1H1M",
+        "instructor": [
+          {
+            "@type": "Person",
+            "name": "Junaid Subhani"
+          }
+        ]
+      },
+      "educationalCredentialAwarded": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Brains College Certificate",
+        "credentialCategory": "Certificate",
+        "url": "https://brainscollege.edu.pk/contact"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": [
+          "Users who want to earn online",
+          "IT field enthusiasts"
+        ]
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Design"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "3.6",
+        "ratingCount": 295,
+        "bestRating": 5,
+        "worstRating": 0.5
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -62,27 +124,28 @@
     <!-- /.preloader -->
     <div class="page-wrapper">
 
-        <header class="main-header main-header--one  clearfix">
+         <header class="main-header main-header--one  clearfix">
             <div class="main-header--one__top clearfix">
                 <div class="container">
                     <div class="main-header--one__top-inner clearfix">
                         <div class="main-header--one__top-left">
                             <div class="main-header--one__top-logo">
-                                <a href="/"><img width="150" src="assets/images/resources/logo-1.png" alt="Brains College Logo" /></a>
+                                <a href="/"><img width="180" src="assets/images/resources/logo-1.png"
+                                        alt="Brains College Logo" /></a>
                             </div>
                         </div>
 
                         <div class="main-header--one__top-right clearfix">
-                        
 
-                            <div  class="main-header--one__top-contact-info clearfix">
-                                <ul  class="main-header--one__top-contact-info-list list-unstyled">
-                                    <li  class="main-header--one__top-contact-info-list-item">
+
+                            <div class="main-header--one__top-contact-info clearfix">
+                                <ul class="main-header--one__top-contact-info-list list-unstyled">
+                                    <li class="main-header--one__top-contact-info-list-item">
                                         <div class="icon">
                                             <span class="icon-phone-call-1"></span>
                                         </div>
                                         <div class="text">
-                                            <h6>Call </h6>
+                                            <h6>Call</h6>
                                             <p><a href="tel:+92 309 5990236">+92 309 5990236</a></p>
                                         </div>
                                     </li>
@@ -96,11 +159,12 @@
                                         </div>
                                     </li>
                                 </ul>
-                                
-                            </div> 
-                        
-                            <img src="nabi.png" width="150" alt="Best IT Courses">
-                            <img src="assets/images/banners/imp.png" width="200" alt="Best IT Courses">
+
+                            </div>
+
+                            <img src="nabi.png" width="150" alt="Brains College">
+                            <img src="assets/images/banners/imp.png" width="150" alt="Brains College">
+                            <img src="assets/images/banners/logo.png" width="150" alt="Brains no 1 Institude in Punjab">
                         </div>
                     </div>
                 </div>
@@ -116,35 +180,44 @@
 
                                 <div class="left">
                                     <ul class="main-menu__list">
-                                        <li class=" current">
+                                        <li class="current">
                                             <a href="/">Home</a>
-                                            
+
                                         </li>
                                         <li><a href="about">About</a></li>
                                         <li class="">
                                             <a href="course">Courses</a>
-                                            
+
                                         </li>
-                                        
-                                       
+
+
                                         <li><a href="contact">Contact</a></li>
                                     </ul>
                                 </div>
 
                                 <div class="right">
                                     <div class="main-menu__right">
-                                        
+                                        <div class="main-menu__right-login-register">
+                                            <ul class="list-unstyled">
+                                                <li><a href="admin/login.php">Login</a></li>
+                                                <li><a href="admin/register.php">Register</a></li>
+                                            </ul>
+                                        </div>
                                         <div class="main-menu__right-cart-search">
                                             <div class="main-menu__right-cart-box">
 
-                                            <div class="main-menu__right-search-box">
-                                                <a href="#" class="thm-btn search-toggler">Search</a>
+                                                <!--<div class="main-menu__right-search-box">-->
+                                                <!--    <a href="https://result.brainscollege.edu.pk/" class="thm-btn search-toggler">Click Here Check Result</a>-->
+                                                <!--</div>-->
+                                                
+                                                <div class="main-menu__right-search-box">
+                                                    <a href="https://result.brainscollege.edu.pk/" class="thm-btn" style="color: white;">CHECK RESULT</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                            </div>
+                                </div>
                         </nav>
 
                     </div>
@@ -200,7 +273,6 @@
     <section class="courses-one">
         <div class="container">
             <div class="section-title text-center">
-                <span class="section-title__tagline">Checkout New List</span>
                 <h2 class="section-title__title">Explore Courses</h2>
             </div>
             <div class="row">
@@ -208,7 +280,7 @@
                 <div class="col-xl-3 col-lg-6 col-md-6">
                     <div class="courses-one__single wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
                        <a href="courses/become-a-microsoft-office-expert"> <div class="courses-one__single-img">
-                            <img src="assets/images/resources/it.jpg" alt="become-a-microsoft-office-expert" />
+                            <img src="assets/images/resources/office.png" alt="become-a-microsoft-office-expert" />
                             <div class="overlay-text">
                                 <p>Featured</p>
                             </div>
@@ -246,7 +318,7 @@
                     <div class="courses-one__single wow fadeInLeft" data-wow-delay="100ms"
                         data-wow-duration="1000ms">
                       <a href="courses/become-a-graphic-designer"> <div class="courses-one__single-img">
-                            <img src="assets/images/resources/graphics.jpg" alt="become-a-graphic-designer" />
+                            <img src="assets/images/resources/graphics.png" alt="become-a-graphic-designer" />
                             <div class="overlay-text">
                                 <p>Featured</p>
                             </div>
@@ -286,7 +358,7 @@
                     <div class="courses-one__single wow fadeInRight" data-wow-delay="0ms"
                         data-wow-duration="1000ms">
                        <a href="courses/become-a-full-stack-web-developer"><div class="courses-one__single-img">
-                            <img src="assets/images/resources/web.jpg" alt="become-a-full-stack-web-developer" />
+                            <img src="assets/images/resources/web.png" alt="become-a-full-stack-web-developer" />
                             <div class="overlay-text">
                                 <p>Featured</p>
                             </div>
@@ -326,7 +398,7 @@
                     <div class="courses-one__single wow fadeInRight" data-wow-delay="100ms"
                         data-wow-duration="1000ms">
                        <a href="courses/become-an-autocad-expert"> <div class="courses-one__single-img">
-                            <img src="assets/images/resources/autocad.jpg" alt="become-an-autocad-expert" />
+                            <img src="assets/images/resources/autocad.png" alt="become-an-autocad-expert" />
                         </div></a>
                         <div class="courses-one__single-content">
                             <div class="courses-one__single-content-overlay-img">
@@ -362,7 +434,7 @@
                 <div class="col-xl-3 col-lg-6 col-md-6">
                     <div class="courses-one__single wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
                        <a href="courses/become-a-3dsmax-expert"> <div class="courses-one__single-img">
-                            <img src="assets/images/resources/max.jpg" alt="become-a-3dsmax-expert" />
+                            <img src="assets/images/resources/max.png" alt="become-a-3dsmax-expert" />
                         </div></a>
                         <div class="courses-one__single-content">
                             <div class="courses-one__single-content-overlay-img">
@@ -399,7 +471,7 @@
                     <div class="courses-one__single wow fadeInLeft" data-wow-delay="100ms"
                         data-wow-duration="1000ms">
                        <a href="courses/become-a-digital-marketing-expert"> <div class="courses-one__single-img">
-                            <img src="assets/images/resources/dm.jpg" alt="become-a-digital-marketing-expert" />
+                            <img src="assets/images/resources/digital-marketing.png" alt="become-a-digital-marketing-expert" />
                             <div class="overlay-text">
                                 <p>Featured</p>
                             </div>
@@ -439,7 +511,7 @@
                     <div class="courses-one__single wow fadeInRight" data-wow-delay="0ms"
                         data-wow-duration="1000ms">
                        <a href="courses/become-a-digital-accountant"> <div class="courses-one__single-img">
-                            <img src="assets/images/resources/ac.jpg" alt="become-a-digital-accountant" />
+                            <img src="assets/images/resources/autocad.jpg" alt="become-a-digital-accountant" />
                         </div></a>
                         <div class="courses-one__single-content">
                             <div class="courses-one__single-content-overlay-img">
@@ -626,7 +698,7 @@
                     <div class="courses-one__single wow fadeInRight" data-wow-delay="100ms"
                         data-wow-duration="1000ms">
                        <a href="courses/prepare-yourself-for-ielts"> <div class="courses-one__single-img">
-                            <img src="assets/images/resources/ielts.png" alt="prepare-yourself-for-ielts"" />
+                            <img src="assets/images/resources/ielts.jpg" alt="prepare-yourself-for-ielts" />
                             <div class="overlay-text">
                                 <p>Featured</p>
                             </div>
@@ -775,7 +847,7 @@
                     <div class="courses-one__single wow fadeInRight" data-wow-delay="100ms"
                         data-wow-duration="1000ms">
                        <a href="courses/become-a-computer-programming-expert"> <div class="courses-one__single-img">
-                            <img src="assets/images/resources/pgc.jpg" alt="Become-a-computer-programming-expert" />
+                            <img src="assets/images/resources/programming.jpg" alt="Become-a-computer-programming-expert" />
                             <div class="overlay-text">
                                 <p>Featured</p>
                             </div>
@@ -812,7 +884,7 @@
                 <div class="col-xl-3 col-lg-6 col-md-6">
                     <div class="courses-one__single wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
                        <a href="courses/become-a-mobile-repairing-expert"> <div class="courses-one__single-img">
-                            <img src="assets/images/resources/mp.jpg" alt="become-a-mobile-repairing-expert" />
+                            <img src="assets/images/resources/mobile-repairing.jpg" alt="become-a-mobile-repairing-expert" />
                         </div></a>
                         <div class="courses-one__single-content">
                             <div class="courses-one__single-content-overlay-img">
@@ -848,7 +920,7 @@
                     <div class="courses-one__single wow fadeInLeft" data-wow-delay="100ms"
                         data-wow-duration="1000ms">
                        <a href="courses/become-a-laptop-repairing-expert"> <div class="courses-one__single-img">
-                            <img src="assets/images/resources/laptop.jpg" alt="become-a-laptop-repairing-expert" />
+                            <img src="assets/images/resources/laptop.png" alt="become-a-laptop-repairing-expert" />
                             <div class="overlay-text">
                                 <p>Featured</p>
                             </div>
@@ -887,7 +959,7 @@
                     <div class="courses-one__single wow fadeInRight" data-wow-delay="0ms"
                         data-wow-duration="1000ms">
                        <a href="courses/become-a-cctv-expert"> <div class="courses-one__single-img">
-                            <img src="assets/images/resources/cctv 1.jpg" alt="become-a-cctv-expert" />
+                            <img src="assets/images/resources/cctv.png" alt="become-a-cctv-expert" />
                         </div></a>
                         <div class="courses-one__single-content">
                             <div class="courses-one__single-content-overlay-img">
@@ -1024,6 +1096,7 @@
     </div>
 </div>
 <!--End Single Courses One-->
+
 
             </div>
         </div>

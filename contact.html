@@ -52,6 +52,69 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/zilom.css" />
     <link rel="stylesheet" href="assets/css/zilom-responsive.css" />
+    
+    <!--schema markup-->
+    <script type="application/ld+json" data-purpose="safely-set-inner-html:course-landing-page/seo-info">
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "Course",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Brains College",
+        "sameAs": "https://brainscollege.edu.pk/"
+      },
+      "provider": {
+        "@type": "Person",
+        "name": "Junaid Subhani",
+        "sameAs": "https://brainscollege.edu.pk/contact"
+      },
+      "@id": "https://brainscollege.edu.pk/contact",
+      "name": "Contact Us - Brains College | Computer Courses in Punjab",
+      "description": "Get in touch with Brains College, Punjab's premier institution for computer courses. Contact us for admissions, inquiries, or campus visits.",
+      "isAccessibleForFree": true,
+      "image": "https://brainscollege.edu.pk/assets/images/resources/main%20image.png",
+      "inLanguage": "hi",
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "PT1H1M",
+        "instructor": [
+          {
+            "@type": "Person",
+            "name": "Junaid Subhani"
+          }
+        ]
+      },
+      "educationalCredentialAwarded": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Brains College Certificate",
+        "credentialCategory": "Certificate",
+        "url": "https://brainscollege.edu.pk/contact"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": [
+          "Users who want to earn online",
+          "IT field enthusiasts"
+        ]
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Design"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "3.6",
+        "ratingCount": 295,
+        "bestRating": 5,
+        "worstRating": 0.5
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -63,27 +126,28 @@
     <!-- /.preloader -->
     <div class="page-wrapper">
 
-        <header class="main-header main-header--one  clearfix">
+         <header class="main-header main-header--one  clearfix">
             <div class="main-header--one__top clearfix">
                 <div class="container">
                     <div class="main-header--one__top-inner clearfix">
                         <div class="main-header--one__top-left">
                             <div class="main-header--one__top-logo">
-                                <a href="/"><img width="150" src="assets/images/resources/logo-1.png" alt="Brains College Logo" /></a>
+                                <a href="/"><img width="180" src="assets/images/resources/logo-1.png"
+                                        alt="Brains College Logo" /></a>
                             </div>
                         </div>
 
                         <div class="main-header--one__top-right clearfix">
-                        
 
-                            <div  class="main-header--one__top-contact-info clearfix">
-                                <ul  class="main-header--one__top-contact-info-list list-unstyled">
-                                    <li  class="main-header--one__top-contact-info-list-item">
+
+                            <div class="main-header--one__top-contact-info clearfix">
+                                <ul class="main-header--one__top-contact-info-list list-unstyled">
+                                    <li class="main-header--one__top-contact-info-list-item">
                                         <div class="icon">
                                             <span class="icon-phone-call-1"></span>
                                         </div>
                                         <div class="text">
-                                            <h6>Call </h6>
+                                            <h6>Call</h6>
                                             <p><a href="tel:+92 309 5990236">+92 309 5990236</a></p>
                                         </div>
                                     </li>
@@ -97,11 +161,12 @@
                                         </div>
                                     </li>
                                 </ul>
-                                
-                            </div> 
-                        
-                            <img src="nabi.png" width="150" alt="Best IT Courses">
-                            <img src="assets/images/banners/imp.png" width="200" alt="Best IT Courses">
+
+                            </div>
+
+                            <img src="nabi.png" width="150" alt="Brains College">
+                            <img src="assets/images/banners/imp.png" width="150" alt="Brains College">
+                            <img src="assets/images/banners/logo.png" width="150" alt="Brains no 1 Institude in Punjab">
                         </div>
                     </div>
                 </div>
@@ -117,34 +182,44 @@
 
                                 <div class="left">
                                     <ul class="main-menu__list">
-                                        <li class=" current">
+                                        <li class="current">
                                             <a href="/">Home</a>
-                                            
+
                                         </li>
                                         <li><a href="about">About</a></li>
                                         <li class="">
                                             <a href="course">Courses</a>
-                                            
+
                                         </li>
-                                        
+
+
                                         <li><a href="contact">Contact</a></li>
                                     </ul>
                                 </div>
 
                                 <div class="right">
                                     <div class="main-menu__right">
-                                        
+                                        <div class="main-menu__right-login-register">
+                                            <ul class="list-unstyled">
+                                                <li><a href="admin/login.php">Login</a></li>
+                                                <li><a href="admin/register.php">Register</a></li>
+                                            </ul>
+                                        </div>
                                         <div class="main-menu__right-cart-search">
                                             <div class="main-menu__right-cart-box">
 
-                                            <div class="main-menu__right-search-box">
-                                                <a href="#" class="thm-btn search-toggler">Search</a>
+                                                <!--<div class="main-menu__right-search-box">-->
+                                                <!--    <a href="https://result.brainscollege.edu.pk/" class="thm-btn search-toggler">Click Here Check Result</a>-->
+                                                <!--</div>-->
+                                                
+                                                <div class="main-menu__right-search-box">
+                                                    <a href="https://result.brainscollege.edu.pk/" class="thm-btn" style="color: white;">CHECK RESULT</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                            </div>
+                                </div>
                         </nav>
 
                     </div>

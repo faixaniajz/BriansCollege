@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <title>Register | Brains College Punjab</title>
+    <title>Register</title>
 </head>
 <body>
       <div class="container">
@@ -20,29 +20,34 @@
             $Rollnum = $_POST['Rollnum'];
             $password = $_POST['password'];
 
-         //verifying the unique email
+            // Validate email domain to allow only @gmail.com
+            if (!preg_match("/^[a-zA-Z0-9._%+-]+@gmail\.com$/", $email)) {
+                echo "<div class='message'>
+                          <p>Please use a valid Gmail address (e.g., example@gmail.com).</p>
+                      </div> <br>";
+                echo "<a href='javascript:self.history.back()'><button class='btn'>Go Back</button>";
+                exit; // Stop further execution if the email is invalid
+            }
 
-         $verify_query = mysqli_query($con,"SELECT Email FROM users WHERE Email='$email'");
+            // Check if the email already exists in the database
+            $verify_query = mysqli_query($con,"SELECT Email FROM users WHERE Email='$email'");
 
-         if(mysqli_num_rows($verify_query) !=0 ){
-            echo "<div class='message'>
-                      <p>This email is used, Try another One Please!</p>
-                  </div> <br>";
-            echo "<a href='javascript:self.history.back()'><button class='btn'>Go Back</button>";
-         }
-         else{
+            if(mysqli_num_rows($verify_query) != 0 ){
+                echo "<div class='message'>
+                          <p>This email is already used, try another one!</p>
+                      </div> <br>";
+                echo "<a href='javascript:self.history.back()'><button class='btn'>Go Back</button>";
+            }
+            else{
+                // Insert new user into the database
+                mysqli_query($con,"INSERT INTO users(Username, Email, Rollnum, Password) VALUES('$username', '$email', '$Rollnum', '$password')") or die("Error Occurred");
 
-            mysqli_query($con,"INSERT INTO users(Username,Email,Rollnum,Password) VALUES('$username','$email','$Rollnum','$password')") or die("Error Occured");
-
-            echo "<div class='message'>
-                      <p>Registration successfully!</p>
-                  </div> <br>";
-            echo "<a href='home.php'><button class='btn'>Login Now</button>";
-         
-
-         }
-
-         }else{
+                echo "<div class='message'>
+                          <p>Registration successful!</p>
+                      </div> <br>";
+                echo "<a href='login.php'><button class='btn'>Login Now</button>";
+            }
+         } else {
          
         ?>
 
@@ -68,7 +73,6 @@
                 </div>
 
                 <div class="field">
-                    
                     <input type="submit" class="btn" name="submit" value="Register" required>
                 </div>
                 <div class="links">

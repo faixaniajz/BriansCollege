@@ -1,0 +1,80 @@
+CREATE TABLE users (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Username VARCHAR(50) NOT NULL,
+    Email VARCHAR(50) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    Rollnum VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE pending_assignments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT NOT NULL,
+    Email VARCHAR(50) NOT NULL,
+    course VARCHAR(50) NOT NULL,
+    assignment_name VARCHAR(255) NOT NULL,
+    assignment_file VARCHAR(255) NOT NULL,
+    upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE web (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    Email VARCHAR(50) NOT NULL,
+    assignment_name VARCHAR(255),
+    assignment_file VARCHAR(255),
+    upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE it (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    Email VARCHAR(50) NOT NULL,
+    assignment_name VARCHAR(255),
+    assignment_file VARCHAR(255),
+    upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE python (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    Email VARCHAR(50) NOT NULL,
+    assignment_name VARCHAR(255),
+    assignment_file VARCHAR(255),
+    upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE graphics (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    Email VARCHAR(50) NOT NULL,
+    assignment_name VARCHAR(255),
+    assignment_file VARCHAR(255),
+    upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE autocad (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    Email VARCHAR(50) NOT NULL,
+    assignment_name VARCHAR(255),
+    assignment_file VARCHAR(255),
+    upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE 3dsmax (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    Email VARCHAR(50) NOT NULL,
+    assignment_name VARCHAR(255),
+    assignment_file VARCHAR(255),
+    upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE shopify (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    Email VARCHAR(50) NOT NULL,
+    assignment_name VARCHAR(255),
+    assignment_file VARCHAR(255),
+    upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

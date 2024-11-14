@@ -53,6 +53,68 @@
     <!-- template styles -->
     <link rel="stylesheet" href="../assets/css/zilom.css" />
     <link rel="stylesheet" href="../assets/css/zilom-responsive.css" />
+    <!--schema markup-->
+    <script type="application/ld+json" data-purpose="safely-set-inner-html:course-landing-page/seo-info">
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "Course",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Brains College",
+        "sameAs": "https://brainscollege.edu.pk/"
+      },
+      "provider": {
+        "@type": "Person",
+        "name": "Junaid Subhani",
+        "sameAs": "https://brainscollege.edu.pk/contact"
+      },
+      "@id": "https://brainscollege.edu.pk/courses/become-a-graphic-designer",
+      "name": "Become a Graphic Designer | Brains College, Punjab",
+      "description": "Learn graphic design at Brains College, Punjab. Master tools like Photoshop and Illustrator to create stunning visuals and advance your design career.",
+      "isAccessibleForFree": true,
+      "image": "https://brainscollege.edu.pk/assets/images/banners/graphics.jpg",
+      "inLanguage": "hi",
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Physical",
+        "courseWorkload": "PT1H1M",
+        "instructor": [
+          {
+            "@type": "Person",
+            "name": "Junaid Subhani"
+          }
+        ]
+      },
+      "educationalCredentialAwarded": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Brains College Certificate",
+        "credentialCategory": "Certificate",
+        "url": "https://brainscollege.edu.pk/contact"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": [
+          "Users who want to earn online",
+          "IT field enthusiasts"
+        ]
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Design"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "3.6",
+        "ratingCount": 295,
+        "bestRating": 5,
+        "worstRating": 0.5
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -70,21 +132,22 @@
                     <div class="main-header--one__top-inner clearfix">
                         <div class="main-header--one__top-left">
                             <div class="main-header--one__top-logo">
-                                <a href="/"><img width="150" src="../assets/images/resources/logo-1.png" alt="Brains College Logo" /></a>
+                                <a href="/"><img width="180" src="../assets/images/resources/logo-1.png"
+                                        alt="Brains College Logo" /></a>
                             </div>
                         </div>
 
                         <div class="main-header--one__top-right clearfix">
-                        
 
-                            <div  class="main-header--one__top-contact-info clearfix">
-                                <ul  class="main-header--one__top-contact-info-list list-unstyled">
-                                    <li  class="main-header--one__top-contact-info-list-item">
+
+                            <div class="main-header--one__top-contact-info clearfix">
+                                <ul class="main-header--one__top-contact-info-list list-unstyled">
+                                    <li class="main-header--one__top-contact-info-list-item">
                                         <div class="icon">
                                             <span class="icon-phone-call-1"></span>
                                         </div>
                                         <div class="text">
-                                            <h6>Call </h6>
+                                            <h6>Call</h6>
                                             <p><a href="tel:+92 309 5990236">+92 309 5990236</a></p>
                                         </div>
                                     </li>
@@ -98,11 +161,12 @@
                                         </div>
                                     </li>
                                 </ul>
-                                
-                            </div> 
-                        
-                            <img src="../nabi.png" width="150" alt="Best IT Colleges">
-                            <img src="../assets/images/banners/imp.png" width="200" alt="Best IT Colleges">
+
+                            </div>
+
+                            <img src="../nabi.png" width="150" alt="Brains College">
+                            <img src="../assets/images/banners/imp.png" width="150" alt="Brains College">
+                            <img src="../assets/images/banners/logo.png" width="150" alt="Brains no 1 Institude in Punjab">
                         </div>
                     </div>
                 </div>
@@ -118,35 +182,44 @@
 
                                 <div class="left">
                                     <ul class="main-menu__list">
-                                        <li class=" current">
+                                        <li class="current">
                                             <a href="/">Home</a>
-                                            
+
                                         </li>
                                         <li><a href="../about">About</a></li>
                                         <li class="">
                                             <a href="../course">Courses</a>
-                                            
+
                                         </li>
-                                        
-                                        
+
+
                                         <li><a href="../contact">Contact</a></li>
                                     </ul>
                                 </div>
 
                                 <div class="right">
                                     <div class="main-menu__right">
-                                        
+                                        <div class="main-menu__right-login-register">
+                                            <ul class="list-unstyled">
+                                                <li><a href="../admin/login.php">Login</a></li>
+                                                <li><a href="../admin/register.php">Register</a></li>
+                                            </ul>
+                                        </div>
                                         <div class="main-menu__right-cart-search">
                                             <div class="main-menu__right-cart-box">
 
-                                            <div class="main-menu__right-search-box">
-                                                <a href="#" class="thm-btn search-toggler">Search</a>
+                                                <!--<div class="main-menu__right-search-box">-->
+                                                <!--    <a href="https://result.brainscollege.edu.pk/" class="thm-btn search-toggler">Click Here Check Result</a>-->
+                                                <!--</div>-->
+                                                
+                                                <div class="main-menu__right-search-box">
+                                                    <a href="https://result.brainscollege.edu.pk/" class="thm-btn" style="color: white;">CHECK RESULT</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                            </div>
+                                </div>
                         </nav>
 
                     </div>
@@ -162,31 +235,6 @@
 
             </div>
         </div>
-
-
-
-    <!--Page Header Start-->
-    <section class="page-header clearfix" style="background-image:url(../assets/images/resources/about\ us.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="page-header__wrapper clearfix">
-                        <div class="page-header__title">
-                            <h4 style="color: white; size: 50px;">Course Details</h4>
-                        </div>
-                        <div class="page-header__menu">
-                            <ul class="page-header__menu-list list-unstyled clearfix">
-                                <li><a href="/">Home</a></li>
-                                <li class="active">Course Details</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!--Page Header End-->
 
     <!--Start Course Details-->
     <section class="course-details">
@@ -465,7 +513,7 @@
                         <div class="course-details__price wow fadeInUp animated" data-wow-delay="0.1s">
                             
                             <div class="course-details__price-btn">
-                                <form action="php system/view.php" method="get">
+                                <form action="../admin/view.php" method="get">
                                     <button type="submit"  name="course" value="graphics" class="thm-btn comment-form__btn">Assignments For Graphics</button>
                                 </form>
                             </div>

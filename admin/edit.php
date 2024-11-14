@@ -3,7 +3,7 @@
 
    include("php/config.php");
    if(!isset($_SESSION['valid'])){
-    header("Location: home.php");
+    header("Location: login.php");
    }
 ?>
 <!DOCTYPE html>
@@ -18,12 +18,12 @@
 <body>
     <div class="nav">
         <div class="logo">
-            <p><a href="home.php"> Logo</a></p>
+            <p><a href="index.php"><img src="https://brainscollege.edu.pk/assets/images/resources/logo-1.png" width="100" style="margin-top:10px;"></a></p>
         </div>
 
         <div class="right-links">
             <a href="#">Change Profile</a>
-            <a href="php/logout.php"> <button class="btn">Log Out</button> </a>
+            <a href="../../index"> <button class="btn">Log Out</button> </a>
         </div>
     </div>
     <div class="container">
@@ -42,7 +42,7 @@
                     echo "<div class='message'>
                     <p>Profile Updated!</p>
                 </div> <br>";
-              echo "<a href='home.php'><button class='btn'>Go Home</button>";
+              echo "<a href='index.php'><button class='btn'>Go Home</button>";
        
                 }
                }else{
