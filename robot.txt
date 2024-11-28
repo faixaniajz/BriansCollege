@@ -1,4 +1,10 @@
+# Allow all bots to crawl the entire site
 User-agent: *
 Allow: /
 
+# Specifically allow Googlebot to crawl the entire site (explicitly mentioned)
+User-agent: Googlebot
+Allow: /
+
+# Sitemap location to help bots discover all pages
 Sitemap: https://brainscollege.edu.pk/sitemap.xml

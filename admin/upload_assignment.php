@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 echo "
                                 <script>
                                 alert('Assignment uploaded successfully and is pending approval.');
-                                window.location.href='index.php';
+                                window.location.href='index';
                                 </script>
                                 ";
                             } else {
@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             echo "
                             <script>
                             alert('Error moving file.');
-                            window.location.href='index.php';
+                            window.location.href='index';
                             </script>
                             ";
                         }
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         echo "
                         <script>
                         alert('Your file is too big.');
-                        window.location.href='index.php';
+                        window.location.href='index';
                         </script>
                         ";
                     }
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     echo "
                     <script>
                     alert('There was an error uploading your file.');
-                    window.location.href='index.php';
+                    window.location.href='index';
                     </script>
                     ";
                 }
@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 echo "
                 <script>
                 alert('You cannot upload files of this type.');
-                window.location.href='index.php';
+                window.location.href='index';
                 </script>
                 ";
             }
@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "
             <script>
             alert('Email is not registered in the system.');
-            window.location.href='index.php';
+            window.location.href='index';
             </script>
             ";
         }
@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "
         <script>
         alert('Please use a valid Gmail address (e.g., example@gmail.com).');
-        window.location.href='index.php';
+        window.location.href='index';
         </script>
         ";
     }

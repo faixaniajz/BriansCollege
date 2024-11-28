@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <title>Register</title>
+    <title>Assignments Registration | Brains College Portal</title>
+    <meta name="title" content="Assignments Registration | Brains College Portal">
+    <meta name="description" content="Register for access to the Brains College admin portal. Manage courses, student information, and administrative tools efficiently and securely.">
+    <meta name="keywords" content="Brains College admin registration, admin portal signup, course management, secure admin access, Brains College login, educational portal registration">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="https://brainscollege.edu.pk/assets/images/favicons/apple-touch-icon.png">
+    <link rel="canonical" href="https://brainscollege.edu.pk/admin/register" />
 </head>
 <body>
       <div class="container">
@@ -45,7 +51,7 @@
                 echo "<div class='message'>
                           <p>Registration successful!</p>
                       </div> <br>";
-                echo "<a href='login.php'><button class='btn'>Login Now</button>";
+                echo "<a href='login'><button class='btn'>Login Now</button>";
             }
          } else {
          
@@ -76,7 +82,7 @@
                     <input type="submit" class="btn" name="submit" value="Register" required>
                 </div>
                 <div class="links">
-                    Already a member? <a href="login.php">Sign In</a>
+                    Already a member? <a href="login">Sign In</a>
                 </div>
             </form>
         </div>

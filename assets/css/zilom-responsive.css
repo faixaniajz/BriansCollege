@@ -795,6 +795,7 @@
     .main-header--one__top-left {
         float: none;
         text-align: center;
+        margin-top: -22px;
     }
 
     .main-header--one__top-contact-info {

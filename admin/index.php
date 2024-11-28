@@ -3,7 +3,7 @@ session_start();
 
 include("php/config.php");
 if (!isset($_SESSION['valid'])) {
-    header("Location: login.php");
+    header("Location: login");
 }
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ if (!isset($_SESSION['valid'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <title>Home</title>
+    <title>Upload Assigments Here</title>
     <style>
         .upload-form {
             background-color: #ffffff;

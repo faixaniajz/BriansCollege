@@ -553,10 +553,12 @@ ul {
     position: relative;
     display: flex;
     align-items: center;
+    background: white;
     justify-content: space-between;
     -ms-flex-wrap: wrap;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: white;
 }
 
 .main-menu__inner .left {
@@ -1718,7 +1720,7 @@ ul {
     display: block;
     background: #ffffff;
     border-bottom: 1px solid #e0e2e9;
-    padding: 25px 0px 26px;
+   /* padding: 25px 0px 26px;*/
 }
 
 .main-header--one__top-inner {
@@ -1730,7 +1732,8 @@ ul {
     position: relative;
     display: block;
     float: left;
-    margin-left:-59px;
+   /* margin-left:-59px;*/
+   padding-bottom:13px;
 }
 
 .main-header--one__top-logo {
